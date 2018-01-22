@@ -12,18 +12,18 @@ import java.util.List;
  *
  * @author Bryce
  */
-public class ladderLength_127 {
-    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+public class findLadders_127 {
+    public int findLadders(String beginWord, String endWord, List<String> wordList) {
         if(wordList.isEmpty())  return 0;
         int res = 1;
-        HashSet<String> set = new HashSet<>();
+        HashSet<String> next = new HashSet<>();
         HashSet<String> unvisited = new HashSet<>(wordList);
-        set.add(beginWord);
+        next.add(beginWord);
         unvisited.remove(beginWord);
-        while(!set.isEmpty()){
+        while(!next.isEmpty()){
             res++;
             HashSet<String> temp = new HashSet<>();
-            for(String s: set){
+            for(String s: next){
                 for(int i=0; i<s.length(); i++){
                     StringBuilder sb = new StringBuilder(s);
                     for(char c = 'a'; c<='z'; c++){
@@ -37,7 +37,7 @@ public class ladderLength_127 {
                     }
                 }
             }
-            set = temp;
+            next = temp;
         }
         return 0;
     }

@@ -13,7 +13,7 @@ import java.util.List;
  *
  * @author Bryce
  */
-public class wordBreak_140 {
+public class wordBreak_2_140 {
     HashMap<String, List<String>> found = new HashMap<>();
     
     public List<String> wordBreak(String s, List<String> wordDict) {

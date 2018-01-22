@@ -14,7 +14,7 @@ import java.util.List;
  *
  * @author Bryce
  */
-public class findLadders_126 {
+public class findLadders_2_126 {
     HashMap<String, List<String>> map = new HashMap<>();
     List<List<String>> res = new ArrayList<>();
     List<String> list = new ArrayList<>();
@@ -23,15 +23,15 @@ public class findLadders_126 {
     public List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {
         
         if(wordList.isEmpty())  return res;
-        HashSet<String> set = new HashSet<>();
+        HashSet<String> next = new HashSet<>();
         HashSet<String> unvisited = new HashSet<>(wordList);
-        set.add(beginWord);
+        next.add(beginWord);
         unvisited.remove(beginWord);
         boolean found = false;
-        while(!set.isEmpty()){
+        while(!next.isEmpty()){
             if(found)   break;
             HashSet<String> temp = new HashSet<>();
-            for(String s: set){
+            for(String s: next){
                 for(int i=0; i<s.length(); i++){
                     StringBuilder sb = new StringBuilder(s);
                     for(char c = 'a'; c<='z'; c++){
@@ -55,7 +55,7 @@ public class findLadders_126 {
                 }
             }
             unvisited.removeAll(temp);
-            set = temp;
+            next = temp;
         }
         
         backTrace(beginWord, endWord);
