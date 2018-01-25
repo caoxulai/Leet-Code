@@ -18,16 +18,16 @@ public class subsetsWithDup_090 {
         public List<List<Integer>> subsetsWithDup(int[] nums) {
             List<List<Integer>> res = new ArrayList<>();
             Arrays.sort(nums);
-            backTracking(res, new ArrayList<>(), nums, 0);
+            backTrack(res, new ArrayList<>(), nums, 0);
             return res;
         }
         
-        private void backTracking(List<List<Integer>> res, List<Integer> list, int[] nums, int start){
+        private void backTrack(List<List<Integer>> res, List<Integer> list, int[] nums, int start){
             res.add(new ArrayList<>(list));
             for(int i=start; i<nums.length; i++){
                 if(i>start && nums[i] == nums[i-1]) continue;
                 list.add(nums[i]);
-                backTracking(res, list, nums, i+1);
+                backTrack(res, list, nums, i+1);
                 list.remove(list.size() - 1);
             }
         }
