@@ -17,7 +17,6 @@ public class permute_046 {
     class Solution {
         public List<List<Integer>> permute(int[] nums) {
             List<List<Integer>> res = new ArrayList<>();
-            Arrays.sort(nums);
             backTrack(res, new ArrayList<>(), nums);
             return res;
         }
@@ -28,7 +27,7 @@ public class permute_046 {
             }
             else{
                 for(int i=0; i<nums.length; i++){
-                    if(list.contains(nums[i]))  continue;
+                    if(list.contains(nums[i])) continue;
                     list.add(nums[i]);
                     backTrack(res, list, nums);
                     list.remove(list.size() - 1);

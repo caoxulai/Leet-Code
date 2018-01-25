@@ -28,7 +28,7 @@ public class permuteUnique_047 {
             }
             else{
                 for(int i=0; i<nums.length; i++){
-                    if(used[i] || i>0 && nums[i]==nums[i-1] && !used[i-1])  continue;
+                    if(used[i] || i>0 && nums[i]==nums[i-1] && !used[i-1]) continue;
                     list.add(nums[i]);
                     used[i] = true;
                     backTrack(res, list, nums, used);
