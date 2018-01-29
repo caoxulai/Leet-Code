@@ -19,6 +19,7 @@ public class mergeKLists_023_1 {
      * }
      */
     class Solution {
+        // Merge Sort idea, applying to LinkedList
         public ListNode mergeKLists(ListNode[] lists) {
             if(lists==null || lists.length==0)  return null;
             for(int step=1; step<lists.length; step *=2){

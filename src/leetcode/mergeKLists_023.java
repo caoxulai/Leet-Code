@@ -12,6 +12,7 @@ import java.util.PriorityQueue;
  * @author Bryce
  */
 public class mergeKLists_023 {
+    // Using Priorityqueue type to sort the unsorted lists
     public ListNode mergeKLists(ListNode[] lists) {
         ListNode res = new ListNode(0), curr=res;
         if(lists==null || lists.length==0)  return res.next;

@@ -9,7 +9,7 @@ package leetcode;
  *
  * @author Bryce
  */
-public class isPalindrome_234 {
+public class isPalindromeLinkedList_234 {
     /**
      * Definition for singly-linked list.
      * public class ListNode {

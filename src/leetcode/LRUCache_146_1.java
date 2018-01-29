@@ -12,6 +12,7 @@ import java.util.HashMap;
  * @author Bryce
  */
 public class LRUCache_146_1 {
+    // Implement Doubly Linked Node class myself
     class LRUCache {
         DNode head;
         DNode tail;

@@ -12,9 +12,8 @@ import java.util.Queue;
  *
  * @author Bryce
  */
-public class SerializeAndDeserializeBinaryTree_297 {    
-    /**
-     * Definition for a binary tree node.*/
+public class SerializeAndDeserializeBinaryTree_297 {
+    // BFS
     public class bfsCodec {
         String nullSymbol = "X";
         String spliter = ",";

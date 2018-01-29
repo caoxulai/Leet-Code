@@ -13,12 +13,12 @@ import java.util.LinkedHashSet;
  * @author Bryce
  */
 public class LRUCache_146 {
+    // Using LinkedHashSet tyep to find the LRUKey in O(1)
     class LRUCache {
     int cap;
     
     HashMap<Integer, Integer> keyToValue;
     LinkedHashSet<Integer> keys;
-    
 
     public LRUCache(int capacity) {
         cap = capacity;
@@ -34,7 +34,7 @@ public class LRUCache_146 {
         }
         return -1;        
     }
-    
+
     public void put(int key, int value) {
         if(keys.contains(key)){
             keyToValue.put(key, value);
@@ -42,13 +42,15 @@ public class LRUCache_146 {
         }
         else{
             if(keys.size() == cap){
+                // the key is here.
+                // LinkedHashSet has its own iterator which will point its first element
                 int LRUKey = keys.iterator().next();
                 keyToValue.remove(LRUKey);
-                keys.remove(LRUKey);                
-            }            
+                keys.remove(LRUKey);
+            }
             keyToValue.put(key, value);
             keys.add(key);
-        }        
+        }
     }
 }
 

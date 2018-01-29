@@ -25,6 +25,7 @@ public class findLadders_127 {
             HashSet<String> temp = new HashSet<>();
             for(String s: next){
                 for(int i=0; i<s.length(); i++){
+                    // find all possible adjacent words to check if it's in the wordList
                     StringBuilder sb = new StringBuilder(s);
                     for(char c = 'a'; c<='z'; c++){
                         sb.setCharAt(i, c);
