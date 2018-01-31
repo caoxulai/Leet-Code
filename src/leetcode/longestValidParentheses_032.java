@@ -12,6 +12,7 @@ import java.util.Stack;
  * @author Bryce
  */
 public class longestValidParentheses_032 {
+    // dp and using stack, can be enhanced
     class Solution {
         public int longestValidParentheses(String s) {
             int[] dp = new int[s.length()];
