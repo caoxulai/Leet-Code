@@ -6,7 +6,6 @@
 package leetcode;
 
 import java.util.HashMap;
-import leetcode.CopyListWithRandomPointer_138.RandomListNode;
 
 /**
  *
