@@ -9,7 +9,7 @@ package leetcode;
  *
  * @author Bryce
  */
-public class detectCycle {
+public class detectCycle_142 {
     public ListNode detectCycle(ListNode head) {
         ListNode slow = head, fast = head;
         while(fast!=null){
