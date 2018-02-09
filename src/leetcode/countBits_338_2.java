@@ -9,16 +9,14 @@ package leetcode;
  *
  * @author Bryce
  */
-public class countBits_338 {
-    // my intuitive solution, find the pattern for 2-bit integers.
+public class countBits_338_2 {
+    // shifting numbers.
+    // right shit 1 bit, the total number of 1 bits only be 1 less if the lowest bit was 1.
     class Solution {
         public int[] countBits(int num) {
             int[] res = new int[num+1];
-            int size=1;
             for(int i=1; i<=num; i++){
-                if(i == 2 * size)
-                    size *= 2;
-                res[i] = res[i-size] + 1;
+                res[i] = res[i>>1] + (i&1);
             }
             return res;
         }

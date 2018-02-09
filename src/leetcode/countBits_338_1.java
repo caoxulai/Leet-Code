@@ -9,16 +9,14 @@ package leetcode;
  *
  * @author Bryce
  */
-public class countBits_338 {
-    // my intuitive solution, find the pattern for 2-bit integers.
+public class countBits_338_1 {
+    // bit operation. n&(n-1) to drops the lowest set bit.
+    // Therefore, n&(n-1) < n. This also guarantee res[n&(n-1)] is calculated 
     class Solution {
         public int[] countBits(int num) {
             int[] res = new int[num+1];
-            int size=1;
             for(int i=1; i<=num; i++){
-                if(i == 2 * size)
-                    size *= 2;
-                res[i] = res[i-size] + 1;
+                res[i] = res[i&(i-1)] + 1;
             }
             return res;
         }
