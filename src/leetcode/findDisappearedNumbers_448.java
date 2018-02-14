@@ -23,7 +23,7 @@ public class findDisappearedNumbers_448 {
             
             List<Integer> res = new ArrayList<>();
             for(int i=0; i<n; i++){
-                if(nums[i] < n)     res.add(i);
+                if(nums[i] <= n)     res.add((i+n-1)%n + 1);
             }
             return res;
         }
