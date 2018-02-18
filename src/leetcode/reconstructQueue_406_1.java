@@ -23,7 +23,7 @@ public class reconstructQueue_406_1 {
             //pick up the tallest guy first
             //when insert the next tall guy, just need to insert him into kth position
             //repeat until all people are inserted into list
-            Arrays.sort(people,new Comparator<int[]>(){
+            Arrays.sort(people, new Comparator<int[]>(){
                 // lambda expression would worsen the performance
                 // Overriding compare method is faster
                 @Override

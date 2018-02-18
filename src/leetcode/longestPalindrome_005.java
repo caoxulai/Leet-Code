@@ -9,7 +9,8 @@ package leetcode;
  *
  * @author Bryce
  */
-public class longestPalindrome_005 {
+public class longestPalindrome_005 {    
+    // Similar idea like Problem 647 count palindromic substrings
     public String longestPalindrome(String s) {
         int start=0, end=0;
         for(int i=0; i<s.length(); i++){

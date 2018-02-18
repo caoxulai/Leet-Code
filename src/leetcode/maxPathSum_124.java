@@ -9,7 +9,8 @@ package leetcode;
  *
  * @author Bryce
  */
-public class maxPathSum_124 {
+public class maxPathSum_124 {    
+    // Similar to Problem 543
     class Solution {
         int max = Integer.MIN_VALUE;
         public int maxPathSum(TreeNode root) {
