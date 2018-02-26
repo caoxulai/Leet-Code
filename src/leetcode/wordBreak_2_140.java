@@ -21,7 +21,9 @@ public class wordBreak_2_140 {
         if(found.containsKey(s))    return found.get(s);
         if(wordDict.contains(s)){
             res.add(s);
-        }
+        }        
+        // the for loop doesn't cover the cover the case whole string s
+        // because for the corresponding substring(i), it'll be empty, so it can't reach if(next.size() != 0)
         for(int i=1; i<=s.length(); i++){
             String t = s.substring(0, i);
             if(wordDict.contains(t)){                
