@@ -37,5 +37,4 @@ public class getPermutation_060 {
         }
         return sb.toString();
     }
-    
 }
