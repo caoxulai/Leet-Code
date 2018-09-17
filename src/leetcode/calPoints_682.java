@@ -13,31 +13,28 @@ import java.util.Stack;
  */
 public class calPoints_682 {
     public int calPoints(String[] ops) {
-        int res=0;
-        Stack<Integer>  stack = new Stack<>();
-        for(String op: ops){
-            if(op.equals("C")){
-                int last = stack.pop();
-                res -= last;
-            }
-            else if(op.equals("D")){
-                int point = stack.peek()*2;
-                res += point;
-                stack.push(point);
-            }
-            else if(op.equals("+")){
-                int last = stack.pop();
-                int point = stack.peek() + last;
-                res += point;
-                stack.push(last);
-                stack.push(point);
-            }
-            else{                
+        int total = 0;
+        Stack<Integer> points = new Stack<>();
+        for(String op : ops){
+            if(op.equals("+")){
+                int last = points.pop();
+                int point = points.peek() + last;
+                total += point;
+                points.push(last);
+                points.push(point);
+            }else if(op.equals("C")){
+                int top = points.pop();
+                total -= top;
+            }else if(op.equals("D")){
+                int point = points.peek() * 2;
+                total += point;
+                points.push(point);
+            }else{
                 int point = Integer.valueOf(op);
-                res += point;
-                stack.push(point);
+                total += point;
+                points.push(point);
             }
         }
-        return res;
+        return total;
     }
 }
