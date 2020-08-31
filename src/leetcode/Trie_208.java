@@ -36,9 +36,9 @@ public class Trie_208 {
         public void insert(String word) {
             Trie cur = this;
             for(char c: word.toCharArray()){
-                int num = c-'a';
-                if(cur.next[c-'a'] == null) cur.next[c-'a'] = new Trie();
-                cur = cur.next[c-'a'];
+                int index = c-'a';
+                if(cur.next[index] == null) cur.next[index] = new Trie();
+                cur = cur.next[index];
             }
             cur.word = word;
         }
@@ -57,9 +57,9 @@ public class Trie_208 {
         public boolean startsWith(String prefix) {
             Trie cur = this;
             for(char c: prefix.toCharArray()){
-                int num = c-'a';
-                if(cur.next[c-'a'] == null)     return false;
-                cur = cur.next[c-'a'];
+                int index = c-'a';
+                if(cur.next[index] == null)     return false;
+                cur = cur.next[index];
             }
             return true;
         }
