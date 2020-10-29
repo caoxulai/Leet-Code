@@ -3,7 +3,7 @@ package leetcode;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class isEvenOddTree_1690 {
+public class isEvenOddTree_1609 {
     public boolean isEvenOddTree(TreeNode root) {
         Queue<TreeNode> currentLevel = new LinkedList<>();
         currentLevel.offer(root);
