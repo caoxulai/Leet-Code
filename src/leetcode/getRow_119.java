@@ -1,26 +1,21 @@
 package leetcode;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class generate_118 {
-    public List<List<Integer>> generate(int numRows) {
-        List<List<Integer>> ans = new ArrayList<>();
-        if(numRows == 0)    return ans;
-        List<Integer> tmp = new ArrayList<>();
-        tmp.add(1);
-        ans.add(tmp);
-        for(int i=1; i<numRows; i++) {
-            List<Integer> currentLevel = ans.get(i-1);
+public class getRow_119 {
+    public List<Integer> getRow(int rowIndex) {
+        List<Integer> currentLevel = new ArrayList<>();
+        currentLevel.add(1);
+        for(int i=0; i<=rowIndex; i++) {
             List<Integer> nextLevel = new ArrayList<>();
             for(int j=0; j<=i; j++) {
                 int num = getNum(currentLevel, j-1) + getNum(currentLevel, j);
                 nextLevel.add(num);
             }
-            ans.add(nextLevel);
+            currentLevel = nextLevel;
         }
-        return ans;
+        return currentLevel;
     }
 
     private int getNum(List<Integer> list, int pos) {
