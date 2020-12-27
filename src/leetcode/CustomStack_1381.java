@@ -1,5 +1,7 @@
 package leetcode;
 
+import java.util.Stack;
+
 public class CustomStack_1381 {
     class CustomStack {
         private int maxSize;
