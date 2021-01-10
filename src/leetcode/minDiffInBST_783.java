@@ -1,5 +1,7 @@
 package leetcode;
 
+import leetcode.util.TreeNode;
+
 public class minDiffInBST_783 {
     private Integer prev = null;
     private int min = Integer.MAX_VALUE;

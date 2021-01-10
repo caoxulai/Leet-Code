@@ -1,5 +1,7 @@
 package leetcode;
 
+import leetcode.util.TreeNode;
+
 public class longestUnivaluePath_687_1 {
     int max = 0;
 

@@ -1,5 +1,7 @@
 package leetcode;
 
+import leetcode.util.TreeNode;
+
 public class mergeTrees_617 {
     public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
         if(t1 == null)

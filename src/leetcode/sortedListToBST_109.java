@@ -5,6 +5,9 @@
 */
 package leetcode;
 
+import leetcode.util.ListNode;
+import leetcode.util.TreeNode;
+
 /**
  *
  * @author Bryce

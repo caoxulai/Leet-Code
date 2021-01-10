@@ -1,5 +1,7 @@
 package leetcode;
 
+import leetcode.util.TreeNode;
+
 public class sumRootToLeaf_1022 {
     private int ans = 0;
 

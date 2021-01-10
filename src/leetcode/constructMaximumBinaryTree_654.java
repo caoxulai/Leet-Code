@@ -1,5 +1,7 @@
 package leetcode;
 
+import leetcode.util.TreeNode;
+
 public class constructMaximumBinaryTree_654 {
     public TreeNode constructMaximumBinaryTree(int[] nums) {
         return constructMaximumBinaryTree(nums, 0, nums.length);

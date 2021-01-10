@@ -1,5 +1,7 @@
 package leetcode;
 
+import leetcode.util.TreeNode;
+
 public class trimBST_669 {
 
     public TreeNode trimBST(TreeNode root, int low, int high) {

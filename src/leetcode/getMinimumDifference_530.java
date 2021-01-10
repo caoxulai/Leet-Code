@@ -1,5 +1,7 @@
 package leetcode;
 
+import leetcode.util.TreeNode;
+
 public class getMinimumDifference_530 {
 
     // O(n) time, O(1) space

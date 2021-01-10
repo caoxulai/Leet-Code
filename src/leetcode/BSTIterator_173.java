@@ -1,5 +1,7 @@
 package leetcode;
 
+import leetcode.util.TreeNode;
+
 import java.util.Stack;
 
 public class BSTIterator_173 {

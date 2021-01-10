@@ -1,5 +1,7 @@
 package leetcode;
 
+import leetcode.util.TreeNode;
+
 public class deleteNode_450 {
     public TreeNode deleteNode(TreeNode root, int key) {
         if(root == null)    return null;

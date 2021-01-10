@@ -1,5 +1,7 @@
 package leetcode;
 
+import leetcode.util.TreeNode;
+
 public class rangeSumBST_938 {
     public int rangeSumBST(TreeNode root, int low, int high) {
         if(root == null)    return 0;

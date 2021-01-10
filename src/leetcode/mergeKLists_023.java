@@ -5,6 +5,8 @@
 */
 package leetcode;
 
+import leetcode.util.ListNode;
+
 import java.util.PriorityQueue;
 
 /**

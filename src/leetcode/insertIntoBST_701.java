@@ -1,5 +1,7 @@
 package leetcode;
 
+import leetcode.util.TreeNode;
+
 public class insertIntoBST_701 {
     public TreeNode insertIntoBST(TreeNode root, int val) {
         // need a placeholder ans to handle empty intial tree.

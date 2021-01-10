@@ -1,5 +1,7 @@
 package leetcode;
 
+import leetcode.util.TreeNode;
+
 public class tree2str_606 {
     public String tree2str(TreeNode t) {
         if(t == null)
