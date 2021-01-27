@@ -5,7 +5,7 @@ import leetcode.util.TreeNode;
 public class isUnivalTree_965 {
     private int val;
 
-    public boolean isUnivalTree(Tree_889Node root) {
+    public boolean isUnivalTree(TreeNode root) {
         if(root == null)    return true;
         val = root.val;
         return dfs(root);
