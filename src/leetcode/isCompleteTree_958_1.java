@@ -22,4 +22,3 @@ public class isCompleteTree_958_1 {
         return true;
     }
 }
-ne
